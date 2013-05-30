@@ -7,9 +7,21 @@
 #
 
 class AppDelegate
-  attr_accessor :window
+  attr_accessor :statusMenu
+  attr_accessor :statusItem
+  attr_accessor :readingController
+  attr_accessor :preferencesWindowController
+  
   def applicationDidFinishLaunching(a_notification)
-    # Insert code here to initialize your application
+    @statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
+    @statusItem.setMenu(@statusMenu)
+    @statusItem.setTitle("R")
+    @statusItem.setHighlightMode(true)
+    
+    @statusMenu.setDelegate(self)
+  end
+  
+  def menuNeedsUpdate(menu)
+    @readingController.updateView
   end
 end
-
