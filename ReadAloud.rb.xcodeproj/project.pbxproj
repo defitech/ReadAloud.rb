@@ -17,6 +17,8 @@
 		D7DFC6A6175753810081B1C4 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6A5175753810081B1C4 /* PreferencesWindow.xib */; };
 		D7DFC6A8175753E30081B1C4 /* PreferencesWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6A7175753E30081B1C4 /* PreferencesWindowController.rb */; };
 		D7DFC6AA1757795F0081B1C4 /* ReadingController.rb in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6A91757795F0081B1C4 /* ReadingController.rb */; };
+		D7DFC6B21758A5180081B1C4 /* StatusBarIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B11758A5180081B1C4 /* StatusBarIcon.pdf */; };
+		D7DFC6B41758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B31758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		D7DFC6A5175753810081B1C4 /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
 		D7DFC6A7175753E30081B1C4 /* PreferencesWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PreferencesWindowController.rb; sourceTree = "<group>"; };
 		D7DFC6A91757795F0081B1C4 /* ReadingController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ReadingController.rb; sourceTree = "<group>"; };
+		D7DFC6B11758A5180081B1C4 /* StatusBarIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = StatusBarIcon.pdf; sourceTree = "<group>"; };
+		D7DFC6B31758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "StatusBarIcon-Alternate.pdf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 		D7DFC694175749990081B1C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D7DFC6AC17589CCF0081B1C4 /* Images */,
 				D7DFC695175749990081B1C4 /* MainMenu.xib */,
 			);
 			name = Resources;
@@ -123,6 +128,15 @@
 				D7DFC699175749990081B1C4 /* rb_main.rb */,
 			);
 			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		D7DFC6AC17589CCF0081B1C4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D7DFC6B31758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf */,
+				D7DFC6B11758A5180081B1C4 /* StatusBarIcon.pdf */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +215,8 @@
 				D7DFC6A6175753810081B1C4 /* PreferencesWindow.xib in Resources */,
 				D7DFC6A8175753E30081B1C4 /* PreferencesWindowController.rb in Resources */,
 				D7DFC6AA1757795F0081B1C4 /* ReadingController.rb in Resources */,
+				D7DFC6B21758A5180081B1C4 /* StatusBarIcon.pdf in Resources */,
+				D7DFC6B41758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

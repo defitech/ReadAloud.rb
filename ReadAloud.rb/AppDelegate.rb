@@ -15,7 +15,8 @@ class AppDelegate
   def applicationDidFinishLaunching(a_notification)
     @statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
     @statusItem.setMenu(@statusMenu)
-    @statusItem.setTitle("R")
+    @statusItem.setImage(NSImage.imageNamed("StatusBarIcon.pdf"))
+    @statusItem.setAlternateImage(NSImage.imageNamed("StatusBarIcon-Alternate.pdf"))
     @statusItem.setHighlightMode(true)
     
     @statusMenu.setDelegate(self)
