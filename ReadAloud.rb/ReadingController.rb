@@ -6,8 +6,6 @@
 #  Copyright 2013 Defitech. All rights reserved.
 #
 
-framework 'foundation'
-
 class ReadingController
   attr_accessor :statusMenuItem
   attr_accessor :enableMenuItem
@@ -17,7 +15,7 @@ class ReadingController
     @synthesizer = NSSpeechSynthesizer.alloc.init()
     @enabled = false
     
-    NSLog("ReadingController: initialized (id #{self.object_id})")
+    # NSLog("ReadingController: initialized (id #{self.object_id})")
     
     self
   end
@@ -33,7 +31,7 @@ class ReadingController
                                                         repeats:true)
     @enabled = true
     
-    NSLog("ReadingController: enabled")
+    # NSLog("ReadingController: enabled")
     
     updateView
   end
@@ -44,12 +42,16 @@ class ReadingController
     
     @previousPBChangeCount = curChangeCount
     
-    NSLog("ReadingController: clipboard changed; reading...")
+    # NSLog("ReadingController: clipboard changed; reading...")
     
     @synthesizer.stopSpeaking if @synthesizer.isSpeaking
-    # reset voice to current system setting
-    @synthesizer.setVoice(nil)
-    # TODO: get pasteboard content, check if string, then read it
+    @synthesizer.setVoice(nil) # reset voice to current system setting
+    copiedItems = @pasteboard.readObjectsForClasses([NSString],
+                                                    options:{})
+    return if copiedItems == nil or copiedItems.length == 0
+    # the following currently causes an (apparently harmless) "unregistered thread" error
+    # see ref (for example): https://github.com/MacRuby/MacRuby/issues/209
+    @synthesizer.startSpeakingString(copiedItems[0])
   end
 
   def disable(sender)
@@ -57,7 +59,7 @@ class ReadingController
     @synthesizer.stopSpeaking if @synthesizer.isSpeaking
     @enabled = false
     
-    NSLog("ReadingController: disabled")
+    # NSLog("ReadingController: disabled")
     
     updateView
   end
@@ -69,6 +71,6 @@ class ReadingController
     enableMenuItem.setHidden(@enabled)
     disableMenuItem.setHidden(! @enabled)
     
-    NSLog("ReadingController: view updated")
+    # NSLog("ReadingController: view updated")
   end
 end
