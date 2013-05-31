@@ -1,6 +1,6 @@
 # ReadAloud.rb
 
-MacRuby port and evolution of the original ReadAloud tool.
+A tiny tool to help reading aloud selected text in OSX. MacRuby port and evolution of the original [ReadAloud](https://github.com/defitech/ReadAloud) tool.
 
 ## TODO: contents
 
