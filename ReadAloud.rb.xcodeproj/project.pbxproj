@@ -14,11 +14,11 @@
 		D7DFC697175749990081B1C4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC695175749990081B1C4 /* MainMenu.xib */; };
 		D7DFC69A175749990081B1C4 /* rb_main.rb in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC699175749990081B1C4 /* rb_main.rb */; };
 		D7DFC69C175749990081B1C4 /* AppDelegate.rb in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC69B175749990081B1C4 /* AppDelegate.rb */; };
-		D7DFC6A6175753810081B1C4 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6A5175753810081B1C4 /* PreferencesWindow.xib */; };
-		D7DFC6A8175753E30081B1C4 /* PreferencesWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6A7175753E30081B1C4 /* PreferencesWindowController.rb */; };
 		D7DFC6AA1757795F0081B1C4 /* ReadingController.rb in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6A91757795F0081B1C4 /* ReadingController.rb */; };
 		D7DFC6B21758A5180081B1C4 /* StatusBarIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B11758A5180081B1C4 /* StatusBarIcon.pdf */; };
 		D7DFC6B41758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B31758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf */; };
+		D7DFC6B61758C8550081B1C4 /* PreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B51758C8550081B1C4 /* PreferencesView.xib */; };
+		D7DFC6B81758CD470081B1C4 /* PreferencesViewController.rb in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B71758CD470081B1C4 /* PreferencesViewController.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +42,11 @@
 		D7DFC696175749990081B1C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		D7DFC699175749990081B1C4 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		D7DFC69B175749990081B1C4 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
-		D7DFC6A5175753810081B1C4 /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesWindow.xib; sourceTree = "<group>"; };
-		D7DFC6A7175753E30081B1C4 /* PreferencesWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PreferencesWindowController.rb; sourceTree = "<group>"; };
 		D7DFC6A91757795F0081B1C4 /* ReadingController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ReadingController.rb; sourceTree = "<group>"; };
 		D7DFC6B11758A5180081B1C4 /* StatusBarIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = StatusBarIcon.pdf; sourceTree = "<group>"; };
 		D7DFC6B31758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "StatusBarIcon-Alternate.pdf"; sourceTree = "<group>"; };
+		D7DFC6B51758C8550081B1C4 /* PreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesView.xib; sourceTree = "<group>"; };
+		D7DFC6B71758CD470081B1C4 /* PreferencesViewController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PreferencesViewController.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,8 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				D7DFC69B175749990081B1C4 /* AppDelegate.rb */,
-				D7DFC6A7175753E30081B1C4 /* PreferencesWindowController.rb */,
-				D7DFC6A5175753810081B1C4 /* PreferencesWindow.xib */,
+				D7DFC6B51758C8550081B1C4 /* PreferencesView.xib */,
+				D7DFC6B71758CD470081B1C4 /* PreferencesViewController.rb */,
 				D7DFC6A91757795F0081B1C4 /* ReadingController.rb */,
 				D7DFC694175749990081B1C4 /* Resources */,
 				D7DFC698175749990081B1C4 /* Other Sources */,
@@ -212,11 +212,11 @@
 				D7DFC697175749990081B1C4 /* MainMenu.xib in Resources */,
 				D7DFC69A175749990081B1C4 /* rb_main.rb in Resources */,
 				D7DFC69C175749990081B1C4 /* AppDelegate.rb in Resources */,
-				D7DFC6A6175753810081B1C4 /* PreferencesWindow.xib in Resources */,
-				D7DFC6A8175753E30081B1C4 /* PreferencesWindowController.rb in Resources */,
 				D7DFC6AA1757795F0081B1C4 /* ReadingController.rb in Resources */,
 				D7DFC6B21758A5180081B1C4 /* StatusBarIcon.pdf in Resources */,
 				D7DFC6B41758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf in Resources */,
+				D7DFC6B61758C8550081B1C4 /* PreferencesView.xib in Resources */,
+				D7DFC6B81758CD470081B1C4 /* PreferencesViewController.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

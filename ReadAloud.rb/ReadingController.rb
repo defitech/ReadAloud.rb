@@ -12,8 +12,11 @@ class ReadingController
   attr_accessor :disableMenuItem
 
   def init
-    @synthesizer = NSSpeechSynthesizer.alloc.init()
     @enabled = false
+    @pasteboard = nil
+    @previousPBChangeCount = -1
+    @pollTimer = nil
+    @synthesizer = NSSpeechSynthesizer.alloc.init()
     
     # NSLog("ReadingController: initialized (id #{self.object_id})")
     
