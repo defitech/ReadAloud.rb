@@ -25,7 +25,7 @@ class ReadingController
   
   def enable(sender)
     # init pasteboard polling
-    @pasteboard = NSPasteboard.generalPasteboard if not @pasteboard
+    @pasteboard = NSPasteboard.generalPasteboard if @pasteboard == nil
     @previousPBChangeCount = @pasteboard.changeCount
     @pollTimer = NSTimer.scheduledTimerWithTimeInterval(0.25,
                                                         target:self,

@@ -19,6 +19,7 @@
 		D7DFC6B41758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B31758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf */; };
 		D7DFC6B61758C8550081B1C4 /* PreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B51758C8550081B1C4 /* PreferencesView.xib */; };
 		D7DFC6B81758CD470081B1C4 /* PreferencesViewController.rb in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B71758CD470081B1C4 /* PreferencesViewController.rb */; };
+		D7DFC6BA175C8D800081B1C4 /* PopupCloseButton.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B9175C8D800081B1C4 /* PopupCloseButton.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		D7DFC6B31758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "StatusBarIcon-Alternate.pdf"; sourceTree = "<group>"; };
 		D7DFC6B51758C8550081B1C4 /* PreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesView.xib; sourceTree = "<group>"; };
 		D7DFC6B71758CD470081B1C4 /* PreferencesViewController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PreferencesViewController.rb; sourceTree = "<group>"; };
+		D7DFC6B9175C8D800081B1C4 /* PopupCloseButton.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PopupCloseButton.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		D7DFC6AC17589CCF0081B1C4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D7DFC6B9175C8D800081B1C4 /* PopupCloseButton.pdf */,
 				D7DFC6B31758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf */,
 				D7DFC6B11758A5180081B1C4 /* StatusBarIcon.pdf */,
 			);
@@ -217,6 +220,7 @@
 				D7DFC6B41758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf in Resources */,
 				D7DFC6B61758C8550081B1C4 /* PreferencesView.xib in Resources */,
 				D7DFC6B81758CD470081B1C4 /* PreferencesViewController.rb in Resources */,
+				D7DFC6BA175C8D800081B1C4 /* PopupCloseButton.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

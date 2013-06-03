@@ -8,17 +8,19 @@
 
 class PreferencesViewController < NSViewController
   def openSystemPrefsPane(sender)
-    # NSWorkspace.sharedWorkspace.openFile("/System/Library/PreferencePanes/Speech.prefPane")
     errorsPointer = Pointer.new(:object)
-    getOpenPrefsPaneScript.executeAndReturnError(errorsPointer)
-    
-    self.view.window.close
+    getOpenPrefsPaneScript.executeAndReturnError(errorsPointer)    
+    NSApplication.sharedApplication.delegate.closePreferences(self)
+  end
+  
+  def close(sender)
+    NSApplication.sharedApplication.delegate.closePreferences(self)
   end
 
   private
 
   def getOpenPrefsPaneScript
-    if not @openPrefsPaneScript
+    if @openPrefsPaneScript == nil
       scriptSrc = <<-eos
         tell application "System Preferences"
           activate

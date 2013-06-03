@@ -33,15 +33,23 @@ class AppDelegate
   end
   
   def openPreferences(sender)
-    if not @preferencesPopover
+    if @preferencesPopover == nil
       @preferencesPopover = NSPopover.alloc.init
       @preferencesPopover.contentViewController =
         PreferencesViewController.alloc.initWithNibName('PreferencesView',
                                                         bundle:nil)
     end
+
     return if @preferencesPopover.isShown
+    
     @preferencesPopover.showRelativeToRect(@statusItemView.frame,
                                            ofView:@statusItemView,
                                            preferredEdge:NSMinYEdge)
+  end
+  
+  def closePreferences(sender)
+    return if @preferencesPopover == nil
+
+    @preferencesPopover.close
   end
 end
