@@ -1,0 +1,49 @@
+/* 
+  Localizable.strings
+  ReadAloud.rb
+
+  Created by dev on 05.06.13.
+  Copyright (c) 2013 Defitech. All rights reserved.
+*/
+
+"Reading is enabled" = "La lecture est activée";
+"Reading is disabled" = "La lecture est désactivée";
+
+// MASShortcut strings
+
+/* Cancel action button in recording state */
+"Cancel" = "Annuler";
+
+/* Tooltip for non-empty shortcut button */
+"Click to record new shortcut" = "Cliquer pour enregistrer un nouveau raccourci";
+
+/* Tooltip for hint button near the non-empty shortcut */
+"Delete shortcut" = "Supprimer le raccourci";
+
+/* Alert button when shortcut is already used */
+"OK" = "OK";
+
+/* Empty shortcut button in normal state */
+"Record Shortcut" = "Enregistrer un raccourci";
+
+/* Shortcut glyph name for SPACE key */
+"Space" = "Espace";
+
+/* Title for alert when shortcut is already used */
+"The key combination %@ cannot be used" = "La combinaison de touches %@ ne peut pas être utilisée";
+
+/* Message for alert when shortcut is already used by the system */
+"This combination cannot be used used because it is already used by a system-wide keyboard shortcut.\nIf you really want to use this key combination, most shortcuts can be changed in the Keyboard & Mouse panel in System Preferences." = "Cette combinaison ne peut pas être utilisée car elle est déjà définie pour un raccourci global du système.\nSi vous souhaitez quand même utiliser cette combinaison, la plupart des raccourcis peuvent être modifiés depuis le panneau Clavier des préférences système.";
+
+/* Message for alert when shortcut is already used */
+"This shortcut cannot be used used because it is already used by the menu item ‘%@’." = "Ce raccourci ne peut pas être utilisé car il est déjà défini pour l'option de menu ‘%@’.";
+
+/* Non-empty shortcut button in recording state */
+"Type New Shortcut" = "Taper le raccourci";
+
+/* Empty shortcut button in recording state */
+"Type Shortcut" = "Taper le raccourci";
+
+/* Cancel action button for non-empty shortcut in recording state */
+"Use Old Shortuct" = "Utiliser l'ancien raccourci";
+

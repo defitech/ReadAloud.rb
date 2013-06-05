@@ -17,7 +17,6 @@
 		D7DFC6AA1757795F0081B1C4 /* ReadingController.rb in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6A91757795F0081B1C4 /* ReadingController.rb */; };
 		D7DFC6B21758A5180081B1C4 /* StatusBarIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B11758A5180081B1C4 /* StatusBarIcon.pdf */; };
 		D7DFC6B41758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B31758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf */; };
-		D7DFC6B61758C8550081B1C4 /* PreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B51758C8550081B1C4 /* PreferencesView.xib */; };
 		D7DFC6B81758CD470081B1C4 /* PreferencesViewController.rb in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B71758CD470081B1C4 /* PreferencesViewController.rb */; };
 		D7DFC6BA175C8D800081B1C4 /* PopupCloseButton.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B9175C8D800081B1C4 /* PopupCloseButton.pdf */; };
 		D7DFC6CA175C98200081B1C4 /* MASShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC6BF175C98200081B1C4 /* MASShortcut.m */; };
@@ -29,6 +28,8 @@
 		D7DFC6D1175CB38E0081B1C4 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DFC6D0175CB38E0081B1C4 /* Carbon.framework */; };
 		D7DFC6D6175E13A80081B1C4 /* ReadingControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC6D5175E13A80081B1C4 /* ReadingControllerHelper.m */; };
 		D7DFC6D8175F20A80081B1C4 /* Utils.rb in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6D7175F20A80081B1C4 /* Utils.rb */; };
+		D7DFC6D9175F32400081B1C4 /* PreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6DB175F32400081B1C4 /* PreferencesView.xib */; };
+		D7DFC6E1175F34DC0081B1C4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6E3175F34DC0081B1C4 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,20 +43,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D7DFC681175749990081B1C4 /* ReadAloud.rb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadAloud.rb.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7DFC681175749990081B1C4 /* ReadAloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadAloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DFC684175749990081B1C4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D7DFC686175749990081B1C4 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
-		D7DFC68D175749990081B1C4 /* ReadAloud.rb-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ReadAloud.rb-Info.plist"; sourceTree = "<group>"; };
+		D7DFC68D175749990081B1C4 /* ReadAloud-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ReadAloud-Info.plist"; sourceTree = "<group>"; };
 		D7DFC68F175749990081B1C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D7DFC691175749990081B1C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		D7DFC693175749990081B1C4 /* ReadAloud.rb-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReadAloud.rb-Prefix.pch"; sourceTree = "<group>"; };
+		D7DFC693175749990081B1C4 /* ReadAloud-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReadAloud-Prefix.pch"; sourceTree = "<group>"; };
 		D7DFC696175749990081B1C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		D7DFC699175749990081B1C4 /* rb_main.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = rb_main.rb; sourceTree = "<group>"; };
 		D7DFC69B175749990081B1C4 /* AppDelegate.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = AppDelegate.rb; sourceTree = "<group>"; };
 		D7DFC6A91757795F0081B1C4 /* ReadingController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ReadingController.rb; sourceTree = "<group>"; };
 		D7DFC6B11758A5180081B1C4 /* StatusBarIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = StatusBarIcon.pdf; sourceTree = "<group>"; };
 		D7DFC6B31758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "StatusBarIcon-Alternate.pdf"; sourceTree = "<group>"; };
-		D7DFC6B51758C8550081B1C4 /* PreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesView.xib; sourceTree = "<group>"; };
 		D7DFC6B71758CD470081B1C4 /* PreferencesViewController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PreferencesViewController.rb; sourceTree = "<group>"; };
 		D7DFC6B9175C8D800081B1C4 /* PopupCloseButton.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PopupCloseButton.pdf; sourceTree = "<group>"; };
 		D7DFC6BE175C98200081B1C4 /* MASShortcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASShortcut.h; path = Libraries/MASShortcut/MASShortcut.h; sourceTree = "<group>"; };
@@ -73,6 +73,12 @@
 		D7DFC6D4175E131D0081B1C4 /* ReadingControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingControllerHelper.h; sourceTree = "<group>"; };
 		D7DFC6D5175E13A80081B1C4 /* ReadingControllerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingControllerHelper.m; sourceTree = "<group>"; };
 		D7DFC6D7175F20A80081B1C4 /* Utils.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Utils.rb; sourceTree = "<group>"; };
+		D7DFC6DA175F32400081B1C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/PreferencesView.xib; sourceTree = "<group>"; };
+		D7DFC6DC175F32800081B1C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D7DFC6DD175F32800081B1C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/PreferencesView.xib; sourceTree = "<group>"; };
+		D7DFC6DE175F32800081B1C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D7DFC6E2175F34DC0081B1C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7DFC6E4175F34E30081B1C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +108,7 @@
 		D7DFC682175749990081B1C4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D7DFC681175749990081B1C4 /* ReadAloud.rb.app */,
+				D7DFC681175749990081B1C4 /* ReadAloud.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,7 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				D7DFC69B175749990081B1C4 /* AppDelegate.rb */,
-				D7DFC6B51758C8550081B1C4 /* PreferencesView.xib */,
+				D7DFC695175749990081B1C4 /* MainMenu.xib */,
+				D7DFC6DB175F32400081B1C4 /* PreferencesView.xib */,
 				D7DFC6B71758CD470081B1C4 /* PreferencesViewController.rb */,
 				D7DFC6A91757795F0081B1C4 /* ReadingController.rb */,
 				D7DFC6D4175E131D0081B1C4 /* ReadingControllerHelper.h */,
@@ -136,10 +143,11 @@
 		D7DFC68C175749990081B1C4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D7DFC68D175749990081B1C4 /* ReadAloud.rb-Info.plist */,
+				D7DFC6E3175F34DC0081B1C4 /* Localizable.strings */,
+				D7DFC68D175749990081B1C4 /* ReadAloud-Info.plist */,
 				D7DFC68E175749990081B1C4 /* InfoPlist.strings */,
 				D7DFC691175749990081B1C4 /* main.m */,
-				D7DFC693175749990081B1C4 /* ReadAloud.rb-Prefix.pch */,
+				D7DFC693175749990081B1C4 /* ReadAloud-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -148,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				D7DFC6AC17589CCF0081B1C4 /* Images */,
-				D7DFC695175749990081B1C4 /* MainMenu.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -218,9 +225,9 @@
 /* End PBXLegacyTarget section */
 
 /* Begin PBXNativeTarget section */
-		D7DFC680175749990081B1C4 /* ReadAloud.rb */ = {
+		D7DFC680175749990081B1C4 /* ReadAloud */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D7DFC69F175749990081B1C4 /* Build configuration list for PBXNativeTarget "ReadAloud.rb" */;
+			buildConfigurationList = D7DFC69F175749990081B1C4 /* Build configuration list for PBXNativeTarget "ReadAloud" */;
 			buildPhases = (
 				D7DFC67D175749990081B1C4 /* Sources */,
 				D7DFC67E175749990081B1C4 /* Frameworks */,
@@ -230,9 +237,9 @@
 			);
 			dependencies = (
 			);
-			name = ReadAloud.rb;
+			name = ReadAloud;
 			productName = ReadAloud.rb;
-			productReference = D7DFC681175749990081B1C4 /* ReadAloud.rb.app */;
+			productReference = D7DFC681175749990081B1C4 /* ReadAloud.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -244,19 +251,20 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Defitech;
 			};
-			buildConfigurationList = D7DFC67C175749990081B1C4 /* Build configuration list for PBXProject "ReadAloud.rb" */;
+			buildConfigurationList = D7DFC67C175749990081B1C4 /* Build configuration list for PBXProject "ReadAloud" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				fr,
 			);
 			mainGroup = D7DFC678175749990081B1C4;
 			productRefGroup = D7DFC682175749990081B1C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D7DFC680175749990081B1C4 /* ReadAloud.rb */,
+				D7DFC680175749990081B1C4 /* ReadAloud */,
 				D7DFC688175749990081B1C4 /* Deployment */,
 			);
 		};
@@ -274,11 +282,12 @@
 				D7DFC6AA1757795F0081B1C4 /* ReadingController.rb in Resources */,
 				D7DFC6B21758A5180081B1C4 /* StatusBarIcon.pdf in Resources */,
 				D7DFC6B41758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf in Resources */,
-				D7DFC6B61758C8550081B1C4 /* PreferencesView.xib in Resources */,
+				D7DFC6D9175F32400081B1C4 /* PreferencesView.xib in Resources */,
 				D7DFC6B81758CD470081B1C4 /* PreferencesViewController.rb in Resources */,
 				D7DFC6BA175C8D800081B1C4 /* PopupCloseButton.pdf in Resources */,
 				D7DFC6CF175C98200081B1C4 /* README.md in Resources */,
 				D7DFC6D8175F20A80081B1C4 /* Utils.rb in Resources */,
+				D7DFC6E1175F34DC0081B1C4 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +313,7 @@
 /* Begin PBXTargetDependency section */
 		D7DFC68A175749990081B1C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D7DFC680175749990081B1C4 /* ReadAloud.rb */;
+			target = D7DFC680175749990081B1C4 /* ReadAloud */;
 			targetProxy = D7DFC689175749990081B1C4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -314,6 +323,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				D7DFC68F175749990081B1C4 /* en */,
+				D7DFC6DE175F32800081B1C4 /* fr */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -322,8 +332,27 @@
 			isa = PBXVariantGroup;
 			children = (
 				D7DFC696175749990081B1C4 /* en */,
+				D7DFC6DC175F32800081B1C4 /* fr */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		D7DFC6DB175F32400081B1C4 /* PreferencesView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7DFC6DA175F32400081B1C4 /* en */,
+				D7DFC6DD175F32800081B1C4 /* fr */,
+			);
+			name = PreferencesView.xib;
+			sourceTree = "<group>";
+		};
+		D7DFC6E3175F34DC0081B1C4 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7DFC6E2175F34DC0081B1C4 /* en */,
+				D7DFC6E4175F34E30081B1C4 /* fr */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -355,7 +384,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -381,7 +410,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -396,9 +425,9 @@
 				);
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ReadAloud.rb/ReadAloud.rb-Prefix.pch";
-				INFOPLIST_FILE = "ReadAloud.rb/ReadAloud.rb-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "ReadAloud.rb/ReadAloud-Prefix.pch";
+				INFOPLIST_FILE = "ReadAloud.rb/ReadAloud-Info.plist";
+				PRODUCT_NAME = ReadAloud;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -413,9 +442,9 @@
 				);
 				GCC_ENABLE_OBJC_GC = required;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ReadAloud.rb/ReadAloud.rb-Prefix.pch";
-				INFOPLIST_FILE = "ReadAloud.rb/ReadAloud.rb-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "ReadAloud.rb/ReadAloud-Prefix.pch";
+				INFOPLIST_FILE = "ReadAloud.rb/ReadAloud-Info.plist";
+				PRODUCT_NAME = ReadAloud;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -435,7 +464,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D7DFC67C175749990081B1C4 /* Build configuration list for PBXProject "ReadAloud.rb" */ = {
+		D7DFC67C175749990081B1C4 /* Build configuration list for PBXProject "ReadAloud" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D7DFC69D175749990081B1C4 /* Debug */,
@@ -444,13 +473,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D7DFC69F175749990081B1C4 /* Build configuration list for PBXNativeTarget "ReadAloud.rb" */ = {
+		D7DFC69F175749990081B1C4 /* Build configuration list for PBXNativeTarget "ReadAloud" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D7DFC6A0175749990081B1C4 /* Debug */,
 				D7DFC6A1175749990081B1C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7DFC6A2175749990081B1C4 /* Build configuration list for PBXLegacyTarget "Deployment" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +489,7 @@
 				D7DFC6A4175749990081B1C4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
