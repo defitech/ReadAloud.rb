@@ -72,6 +72,25 @@
 						<reference key="NSOnImage" ref="790774591"/>
 						<reference key="NSMixedImage" ref="8616517"/>
 					</object>
+					<object class="NSMenuItem" id="67683216">
+						<reference key="NSMenu" ref="1061646449"/>
+						<bool key="NSIsDisabled">YES</bool>
+						<bool key="NSIsSeparator">YES</bool>
+						<string key="NSTitle"/>
+						<string key="NSKeyEquiv"/>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="790774591"/>
+						<reference key="NSMixedImage" ref="8616517"/>
+					</object>
+					<object class="NSMenuItem" id="266889172">
+						<reference key="NSMenu" ref="1061646449"/>
+						<string key="NSTitle">Spell checker (experimental)</string>
+						<string key="NSKeyEquiv">c</string>
+						<int key="NSKeyEquivModMask">1048576</int>
+						<int key="NSMnemonicLoc">2147483647</int>
+						<reference key="NSOnImage" ref="790774591"/>
+						<reference key="NSMixedImage" ref="8616517"/>
+					</object>
 					<object class="NSMenuItem" id="879826837">
 						<reference key="NSMenu" ref="1061646449"/>
 						<bool key="NSIsDisabled">YES</bool>
@@ -115,9 +134,6 @@
 			<object class="NSCustomObject" id="976324537">
 				<string key="NSClassName">AppDelegate</string>
 			</object>
-			<object class="NSCustomObject" id="755631768">
-				<string key="NSClassName">NSFontManager</string>
-			</object>
 			<object class="NSCustomObject" id="346182311">
 				<string key="NSClassName">ReadingController</string>
 			</object>
@@ -136,10 +152,10 @@
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">delegate</string>
-						<reference key="source" ref="1021"/>
+						<reference key="source" ref="1050"/>
 						<reference key="destination" ref="976324537"/>
 					</object>
-					<int key="connectionID">495</int>
+					<int key="connectionID">558</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -159,11 +175,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
+						<string key="label">openSpellChecker:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="266889172"/>
+					</object>
+					<int key="connectionID">557</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
 						<string key="label">openPreferences:</string>
 						<reference key="source" ref="976324537"/>
 						<reference key="destination" ref="664906028"/>
 					</object>
-					<int key="connectionID">554</int>
+					<int key="connectionID">559</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -236,11 +260,6 @@
 						<string key="objectName">Application</string>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">420</int>
-						<reference key="object" ref="755631768"/>
-						<reference key="parent" ref="0"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">494</int>
 						<reference key="object" ref="976324537"/>
 						<reference key="parent" ref="0"/>
@@ -257,6 +276,8 @@
 							<reference ref="879826837"/>
 							<reference ref="527510106"/>
 							<reference ref="1016349203"/>
+							<reference ref="67683216"/>
+							<reference ref="266889172"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -300,6 +321,16 @@
 						<reference key="object" ref="346182311"/>
 						<reference key="parent" ref="0"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">555</int>
+						<reference key="object" ref="67683216"/>
+						<reference key="parent" ref="1061646449"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">556</int>
+						<reference key="object" ref="266889172"/>
+						<reference key="parent" ref="1061646449"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -309,7 +340,6 @@
 					<string>-1.IBPluginDependency</string>
 					<string>-2.IBPluginDependency</string>
 					<string>-3.IBPluginDependency</string>
-					<string>420.IBPluginDependency</string>
 					<string>494.IBPluginDependency</string>
 					<string>533.IBPluginDependency</string>
 					<string>534.IBPluginDependency</string>
@@ -320,9 +350,12 @@
 					<string>540.IBPluginDependency</string>
 					<string>541.IBPluginDependency</string>
 					<string>545.IBPluginDependency</string>
+					<string>555.IBPluginDependency</string>
+					<string>556.IBPluginDependency</string>
 				</object>
 				<object class="NSArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -351,7 +384,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">554</int>
+			<int key="maxID">559</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -364,10 +397,14 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>closePreferences:</string>
+							<string>closeSpellChecker:</string>
 							<string>openPreferences:</string>
+							<string>openSpellChecker:</string>
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -377,7 +414,9 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>closePreferences:</string>
+							<string>closeSpellChecker:</string>
 							<string>openPreferences:</string>
+							<string>openSpellChecker:</string>
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -386,7 +425,15 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
+								<string key="name">closeSpellChecker:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
 								<string key="name">openPreferences:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">openSpellChecker:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 						</object>
@@ -444,9 +491,11 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>disable:</string>
 							<string>enable:</string>
+							<string>toggle:</string>
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 						</object>
@@ -457,6 +506,7 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>disable:</string>
 							<string>enable:</string>
+							<string>toggle:</string>
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
@@ -466,6 +516,10 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">enable:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">toggle:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 						</object>

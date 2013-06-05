@@ -12,6 +12,7 @@ class AppDelegate
   attr_accessor :readingController
   
   def init
+    @spellCheckerWindowController = nil
     @preferencesPopover = nil
     
     self
@@ -32,6 +33,20 @@ class AppDelegate
     @readingController.updateView
   end
   
+  def openSpellChecker(sender)
+    if @spellCheckerWindowController == nil
+      @spellCheckerWindowController =
+        SpellCheckerWindowController.alloc.initWithWindowNibName('SpellCheckerWindow')
+    end
+    
+    @spellCheckerWindowController.showWindow(self)
+  end
+  
+  def closeSpellChecker(sender)
+    return if @spellCheckerWindowController == nil
+    @spellCheckerWindowController.close
+  end
+  
   def openPreferences(sender)
     if @preferencesPopover == nil
       @preferencesPopover = NSPopover.alloc.init
@@ -49,7 +64,6 @@ class AppDelegate
   
   def closePreferences(sender)
     return if @preferencesPopover == nil
-
     @preferencesPopover.close
   end
 end
