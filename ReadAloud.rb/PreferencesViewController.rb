@@ -7,6 +7,13 @@
 #
 
 class PreferencesViewController < NSViewController
+  attr_accessor :readingShortcutView
+  
+  def loadView
+    super
+    @readingShortcutView.associatedUserDefaultsKey = ReadingController::GlobalShortcut
+  end
+  
   def openSystemPrefsPane(sender)
     errorsPointer = Pointer.new(:object)
     getOpenPrefsPaneScript.executeAndReturnError(errorsPointer)    

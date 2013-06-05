@@ -20,6 +20,15 @@
 		D7DFC6B61758C8550081B1C4 /* PreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B51758C8550081B1C4 /* PreferencesView.xib */; };
 		D7DFC6B81758CD470081B1C4 /* PreferencesViewController.rb in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B71758CD470081B1C4 /* PreferencesViewController.rb */; };
 		D7DFC6BA175C8D800081B1C4 /* PopupCloseButton.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6B9175C8D800081B1C4 /* PopupCloseButton.pdf */; };
+		D7DFC6CA175C98200081B1C4 /* MASShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC6BF175C98200081B1C4 /* MASShortcut.m */; };
+		D7DFC6CB175C98200081B1C4 /* MASShortcut+Monitoring.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC6C1175C98200081B1C4 /* MASShortcut+Monitoring.m */; };
+		D7DFC6CC175C98200081B1C4 /* MASShortcut+UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC6C3175C98200081B1C4 /* MASShortcut+UserDefaults.m */; };
+		D7DFC6CD175C98200081B1C4 /* MASShortcutView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC6C5175C98200081B1C4 /* MASShortcutView.m */; };
+		D7DFC6CE175C98200081B1C4 /* MASShortcutView+UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC6C7175C98200081B1C4 /* MASShortcutView+UserDefaults.m */; };
+		D7DFC6CF175C98200081B1C4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6C8175C98200081B1C4 /* README.md */; };
+		D7DFC6D1175CB38E0081B1C4 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DFC6D0175CB38E0081B1C4 /* Carbon.framework */; };
+		D7DFC6D6175E13A80081B1C4 /* ReadingControllerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DFC6D5175E13A80081B1C4 /* ReadingControllerHelper.m */; };
+		D7DFC6D8175F20A80081B1C4 /* Utils.rb in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6D7175F20A80081B1C4 /* Utils.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,21 @@
 		D7DFC6B51758C8550081B1C4 /* PreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesView.xib; sourceTree = "<group>"; };
 		D7DFC6B71758CD470081B1C4 /* PreferencesViewController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = PreferencesViewController.rb; sourceTree = "<group>"; };
 		D7DFC6B9175C8D800081B1C4 /* PopupCloseButton.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = PopupCloseButton.pdf; sourceTree = "<group>"; };
+		D7DFC6BE175C98200081B1C4 /* MASShortcut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASShortcut.h; path = Libraries/MASShortcut/MASShortcut.h; sourceTree = "<group>"; };
+		D7DFC6BF175C98200081B1C4 /* MASShortcut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MASShortcut.m; path = Libraries/MASShortcut/MASShortcut.m; sourceTree = "<group>"; };
+		D7DFC6C0175C98200081B1C4 /* MASShortcut+Monitoring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MASShortcut+Monitoring.h"; path = "Libraries/MASShortcut/MASShortcut+Monitoring.h"; sourceTree = "<group>"; };
+		D7DFC6C1175C98200081B1C4 /* MASShortcut+Monitoring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MASShortcut+Monitoring.m"; path = "Libraries/MASShortcut/MASShortcut+Monitoring.m"; sourceTree = "<group>"; };
+		D7DFC6C2175C98200081B1C4 /* MASShortcut+UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MASShortcut+UserDefaults.h"; path = "Libraries/MASShortcut/MASShortcut+UserDefaults.h"; sourceTree = "<group>"; };
+		D7DFC6C3175C98200081B1C4 /* MASShortcut+UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MASShortcut+UserDefaults.m"; path = "Libraries/MASShortcut/MASShortcut+UserDefaults.m"; sourceTree = "<group>"; };
+		D7DFC6C4175C98200081B1C4 /* MASShortcutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MASShortcutView.h; path = Libraries/MASShortcut/MASShortcutView.h; sourceTree = "<group>"; };
+		D7DFC6C5175C98200081B1C4 /* MASShortcutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MASShortcutView.m; path = Libraries/MASShortcut/MASShortcutView.m; sourceTree = "<group>"; };
+		D7DFC6C6175C98200081B1C4 /* MASShortcutView+UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MASShortcutView+UserDefaults.h"; path = "Libraries/MASShortcut/MASShortcutView+UserDefaults.h"; sourceTree = "<group>"; };
+		D7DFC6C7175C98200081B1C4 /* MASShortcutView+UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MASShortcutView+UserDefaults.m"; path = "Libraries/MASShortcut/MASShortcutView+UserDefaults.m"; sourceTree = "<group>"; };
+		D7DFC6C8175C98200081B1C4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Libraries/MASShortcut/README.md; sourceTree = "<group>"; };
+		D7DFC6D0175CB38E0081B1C4 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		D7DFC6D4175E131D0081B1C4 /* ReadingControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReadingControllerHelper.h; path = ../ReadingControllerHelper.h; sourceTree = "<group>"; };
+		D7DFC6D5175E13A80081B1C4 /* ReadingControllerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReadingControllerHelper.m; path = ../ReadingControllerHelper.m; sourceTree = "<group>"; };
+		D7DFC6D7175F20A80081B1C4 /* Utils.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Utils.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7DFC6D1175CB38E0081B1C4 /* Carbon.framework in Frameworks */,
 				D7DFC685175749990081B1C4 /* Cocoa.framework in Frameworks */,
 				D7DFC687175749990081B1C4 /* MacRuby.framework in Frameworks */,
 			);
@@ -68,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				D7DFC68B175749990081B1C4 /* ReadAloud.rb */,
+				D7DFC6BB175C97E20081B1C4 /* Libraries */,
 				D7DFC683175749990081B1C4 /* Frameworks */,
 				D7DFC682175749990081B1C4 /* Products */,
 			);
@@ -84,6 +110,7 @@
 		D7DFC683175749990081B1C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D7DFC6D0175CB38E0081B1C4 /* Carbon.framework */,
 				D7DFC684175749990081B1C4 /* Cocoa.framework */,
 				D7DFC686175749990081B1C4 /* MacRuby.framework */,
 			);
@@ -97,6 +124,8 @@
 				D7DFC6B51758C8550081B1C4 /* PreferencesView.xib */,
 				D7DFC6B71758CD470081B1C4 /* PreferencesViewController.rb */,
 				D7DFC6A91757795F0081B1C4 /* ReadingController.rb */,
+				D7DFC6D4175E131D0081B1C4 /* ReadingControllerHelper.h */,
+				D7DFC6D5175E13A80081B1C4 /* ReadingControllerHelper.m */,
 				D7DFC694175749990081B1C4 /* Resources */,
 				D7DFC698175749990081B1C4 /* Other Sources */,
 				D7DFC68C175749990081B1C4 /* Supporting Files */,
@@ -128,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				D7DFC699175749990081B1C4 /* rb_main.rb */,
+				D7DFC6D7175F20A80081B1C4 /* Utils.rb */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -140,6 +170,32 @@
 				D7DFC6B11758A5180081B1C4 /* StatusBarIcon.pdf */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		D7DFC6BB175C97E20081B1C4 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				D7DFC6BC175C97FA0081B1C4 /* MASShortcut */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		D7DFC6BC175C97FA0081B1C4 /* MASShortcut */ = {
+			isa = PBXGroup;
+			children = (
+				D7DFC6BE175C98200081B1C4 /* MASShortcut.h */,
+				D7DFC6BF175C98200081B1C4 /* MASShortcut.m */,
+				D7DFC6C0175C98200081B1C4 /* MASShortcut+Monitoring.h */,
+				D7DFC6C1175C98200081B1C4 /* MASShortcut+Monitoring.m */,
+				D7DFC6C2175C98200081B1C4 /* MASShortcut+UserDefaults.h */,
+				D7DFC6C3175C98200081B1C4 /* MASShortcut+UserDefaults.m */,
+				D7DFC6C4175C98200081B1C4 /* MASShortcutView.h */,
+				D7DFC6C5175C98200081B1C4 /* MASShortcutView.m */,
+				D7DFC6C6175C98200081B1C4 /* MASShortcutView+UserDefaults.h */,
+				D7DFC6C7175C98200081B1C4 /* MASShortcutView+UserDefaults.m */,
+				D7DFC6C8175C98200081B1C4 /* README.md */,
+			);
+			name = MASShortcut;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +277,8 @@
 				D7DFC6B61758C8550081B1C4 /* PreferencesView.xib in Resources */,
 				D7DFC6B81758CD470081B1C4 /* PreferencesViewController.rb in Resources */,
 				D7DFC6BA175C8D800081B1C4 /* PopupCloseButton.pdf in Resources */,
+				D7DFC6CF175C98200081B1C4 /* README.md in Resources */,
+				D7DFC6D8175F20A80081B1C4 /* Utils.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +290,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7DFC692175749990081B1C4 /* main.m in Sources */,
+				D7DFC6CA175C98200081B1C4 /* MASShortcut.m in Sources */,
+				D7DFC6CB175C98200081B1C4 /* MASShortcut+Monitoring.m in Sources */,
+				D7DFC6CC175C98200081B1C4 /* MASShortcut+UserDefaults.m in Sources */,
+				D7DFC6CD175C98200081B1C4 /* MASShortcutView.m in Sources */,
+				D7DFC6CE175C98200081B1C4 /* MASShortcutView+UserDefaults.m in Sources */,
+				D7DFC6D6175E13A80081B1C4 /* ReadingControllerHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

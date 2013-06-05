@@ -7,6 +7,8 @@
 #
 
 class ReadingController
+  GlobalShortcut = "GlobalShortcutReading"
+  
   attr_accessor :statusMenuItem
   attr_accessor :enableMenuItem
   attr_accessor :disableMenuItem
@@ -20,6 +22,9 @@ class ReadingController
     
     # NSLog("ReadingController: initialized (id #{self.object_id})")
     
+    @helper = ReadingControllerHelper.alloc.initForController(self,
+                                                              withShortcutPrefKey:GlobalShortcut)
+
     self
   end
   
@@ -67,10 +72,17 @@ class ReadingController
     updateView
   end
   
+  def toggle(sender)
+    if @enabled
+      self.disable(sender)
+    else
+      self.enable(sender)
+    end
+  end
+  
   def updateView
-    # TODO use localized string
-    statusMenuItem.setTitle(if @enabled then "Reading is enabled"
-                            else "Reading is disabled" end)
+    status = if @enabled then "Reading is enabled" else "Reading is disabled" end
+    statusMenuItem.setTitle(NSLocalizedString(status, status))
     enableMenuItem.setHidden(@enabled)
     disableMenuItem.setHidden(! @enabled)
     
