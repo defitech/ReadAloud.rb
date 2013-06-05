@@ -1,6 +1,10 @@
 #
-#  ReadingController.rb
-#  ReadAloud.rb
+#  Manages the reading-on-copy function.
+#
+#  Uses an Obj-C helper instead of directly listening to the global shortcut trigger, as at the time
+#  of writing (5.6.2013) passing a Ruby block to the MASShortcut method failed for more or less
+#  obscure reasons (one of them being an obvious lack of experience with all of Obj-C, Cocoa and
+#  MacRuby).
 #
 #  Created by dev on 30.05.13.
 #  Copyright 2013 Defitech. All rights reserved.

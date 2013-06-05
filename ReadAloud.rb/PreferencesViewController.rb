@@ -1,6 +1,5 @@
 #
-#  PreferencesViewController.rb
-#  ReadAloud.rb
+#  Manages the preferences popup.
 #
 #  Created by dev on 31.05.13.
 #  Copyright 2013 Defitech. All rights reserved.

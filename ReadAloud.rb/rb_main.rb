@@ -1,6 +1,5 @@
 #
-#  rb_main.rb
-#  ReadAloud.rb
+#  The MacRuby main file.
 #
 #  Created by dev on 30.05.13.
 #  Copyright (c) 2013 Defitech. All rights reserved.

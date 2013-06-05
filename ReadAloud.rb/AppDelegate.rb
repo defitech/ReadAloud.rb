@@ -1,6 +1,6 @@
 #
-#  AppDelegate.rb
-#  ReadAloud.rb
+#  The app delegate.
+#  Manages general aspects, e.g. status bar item or showing/closing preferences.
 #
 #  Created by dev on 30.05.13.
 #  Copyright 2013 Defitech. All rights reserved.

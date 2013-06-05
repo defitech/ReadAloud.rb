@@ -1,6 +1,5 @@
 //
-//  main.m
-//  ReadAloud.rb
+//  The main function.
 //
 //  Created by dev on 30.05.13.
 //  Copyright (c) 2013 Defitech. All rights reserved.
