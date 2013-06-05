@@ -20,4 +20,4 @@ This is a first-time project with all of Xcode, Cocoa and MacRuby, so there most
 
 - This is a MacRuby port and evolution of the original [ReadAloud](https://github.com/defitech/ReadAloud) tool
 - Global shortcut handling thanks to [shpakovski/MASShortcut](https://github.com/shpakovski/MASShortcut)
-- Status bar icon derived from [this one](http://thenounproject.com/noun/lips/#icon-No14820), designed by [Laetitia W. Merijon](http://thenounproject.com/laetitia.w.merijon) from The Noun Project
+- App & status bar icon derived from [this one](http://thenounproject.com/noun/lips/#icon-No14820), designed by [Laetitia W. Merijon](http://thenounproject.com/laetitia.w.merijon) from The Noun Project
