@@ -70,8 +70,8 @@
 		D7DFC6C7175C98200081B1C4 /* MASShortcutView+UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MASShortcutView+UserDefaults.m"; path = "Libraries/MASShortcut/MASShortcutView+UserDefaults.m"; sourceTree = "<group>"; };
 		D7DFC6C8175C98200081B1C4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = Libraries/MASShortcut/README.md; sourceTree = "<group>"; };
 		D7DFC6D0175CB38E0081B1C4 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
-		D7DFC6D4175E131D0081B1C4 /* ReadingControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReadingControllerHelper.h; path = ../ReadingControllerHelper.h; sourceTree = "<group>"; };
-		D7DFC6D5175E13A80081B1C4 /* ReadingControllerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReadingControllerHelper.m; path = ../ReadingControllerHelper.m; sourceTree = "<group>"; };
+		D7DFC6D4175E131D0081B1C4 /* ReadingControllerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadingControllerHelper.h; sourceTree = "<group>"; };
+		D7DFC6D5175E13A80081B1C4 /* ReadingControllerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadingControllerHelper.m; sourceTree = "<group>"; };
 		D7DFC6D7175F20A80081B1C4 /* Utils.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = Utils.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
