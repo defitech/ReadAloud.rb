@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D74FFB57175F652E003233C4 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = D74FFB56175F652E003233C4 /* AppIcon.icns */; };
 		D7DFC685175749990081B1C4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DFC684175749990081B1C4 /* Cocoa.framework */; };
 		D7DFC687175749990081B1C4 /* MacRuby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7DFC686175749990081B1C4 /* MacRuby.framework */; };
 		D7DFC690175749990081B1C4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC68E175749990081B1C4 /* InfoPlist.strings */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D74FFB56175F652E003233C4 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = AppIcon.icns; path = ../AppIcon.icns; sourceTree = "<group>"; };
 		D7DFC681175749990081B1C4 /* ReadAloud.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReadAloud.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7DFC684175749990081B1C4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D7DFC686175749990081B1C4 /* MacRuby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MacRuby.framework; path = Library/Frameworks/MacRuby.framework; sourceTree = DEVELOPER_DIR; };
@@ -172,6 +174,7 @@
 		D7DFC6AC17589CCF0081B1C4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D74FFB56175F652E003233C4 /* AppIcon.icns */,
 				D7DFC6B9175C8D800081B1C4 /* PopupCloseButton.pdf */,
 				D7DFC6B31758AAB30081B1C4 /* StatusBarIcon-Alternate.pdf */,
 				D7DFC6B11758A5180081B1C4 /* StatusBarIcon.pdf */,
@@ -288,6 +291,7 @@
 				D7DFC6CF175C98200081B1C4 /* README.md in Resources */,
 				D7DFC6D8175F20A80081B1C4 /* Utils.rb in Resources */,
 				D7DFC6E1175F34DC0081B1C4 /* Localizable.strings in Resources */,
+				D74FFB57175F652E003233C4 /* AppIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

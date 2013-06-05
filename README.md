@@ -11,6 +11,11 @@ A tiny OSX tool that reads aloud text copied to the clipboard, to workaround inc
 - Language support: English and French
 
 
+## Disclaimer
+
+This is a first-time project with all of Xcode, Cocoa and MacRuby, so there most likely are bad practices and/or blatant mistakes in the code.
+
+
 ## Acknowledgements
 
 This is a MacRuby port and evolution of the original [ReadAloud](https://github.com/defitech/ReadAloud) tool.
