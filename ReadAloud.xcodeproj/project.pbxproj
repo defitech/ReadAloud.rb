@@ -35,6 +35,7 @@
 		D7DFC6D8175F20A80081B1C4 /* Utils.rb in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6D7175F20A80081B1C4 /* Utils.rb */; };
 		D7DFC6D9175F32400081B1C4 /* PreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6DB175F32400081B1C4 /* PreferencesView.xib */; };
 		D7DFC6E1175F34DC0081B1C4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6E3175F34DC0081B1C4 /* Localizable.strings */; };
+		D7F4411F176094F800B70026 /* ReadAloudApplication.rb in Resources */ = {isa = PBXBuildFile; fileRef = D7F4411E176094F800B70026 /* ReadAloudApplication.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		D7DFC6DE175F32800081B1C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D7DFC6E2175F34DC0081B1C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D7DFC6E4175F34E30081B1C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D7F4411E176094F800B70026 /* ReadAloudApplication.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ReadAloudApplication.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 		D7DFC698175749990081B1C4 /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				D7F4411E176094F800B70026 /* ReadAloudApplication.rb */,
 				D7DFC699175749990081B1C4 /* rb_main.rb */,
 				D7DFC6D7175F20A80081B1C4 /* Utils.rb */,
 			);
@@ -308,6 +311,7 @@
 				D74FFB5D175F7226003233C4 /* SpellCheckerProcess.pdf in Resources */,
 				D74FFB5F175F7A2C003233C4 /* SpellCheckerWindowController.rb in Resources */,
 				D74FFB61175F8127003233C4 /* SpellCheckerProcessAlternate.pdf in Resources */,
+				D7F4411F176094F800B70026 /* ReadAloudApplication.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
