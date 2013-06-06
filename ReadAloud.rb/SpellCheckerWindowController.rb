@@ -10,7 +10,9 @@ require 'json'
 class SpellCheckerWindowController < NSWindowController
   attr_accessor :originalTextView
   attr_accessor :processButton
+  attr_accessor :resultLabel
   attr_accessor :resultTextView
+  attr_accessor :resultReadButton
   
   def loadWindow
     super
@@ -26,7 +28,7 @@ class SpellCheckerWindowController < NSWindowController
     # TODO: set locale from system
     @apiURL = NSURL.URLWithString("https://www.google.com/speech-api/v1/recognize?xjerr=1&client=chromium&lang=fr-FR")
     
-    @processingTask = nil
+    setResultLabelText(NSLocalizedString("Result", "Result"))
   end
   
   def showWindow(sender)
@@ -37,13 +39,13 @@ class SpellCheckerWindowController < NSWindowController
   def readOriginalText(sender)
     @synthesizer.stopSpeaking if @synthesizer.isSpeaking
     @synthesizer.setVoice(nil)
-    @synthesizer.startSpeakingString(originalTextView.textStorage.string)
+    @synthesizer.startSpeakingString(@originalTextView.string)
   end
   
   def readResultText(sender)
     @synthesizer.stopSpeaking if @synthesizer.isSpeaking
     @synthesizer.setVoice(nil)
-    @synthesizer.startSpeakingString(resultTextView.textStorage.string)
+    @synthesizer.startSpeakingString(@resultTextView.string)
   end
   
   def process(sender)
@@ -51,18 +53,16 @@ class SpellCheckerWindowController < NSWindowController
     
     @synthesizer.setVoice(nil)
     
-    originalText = originalTextView.textStorage.string
+    originalText = @originalTextView.string
     return if originalText.length == 0
-    
-    NSLog("About to process...")
     
     if not @synthesizer.startSpeakingString(originalText,
                                             toURL:@tempFileURL)
-      NSLog("Error speaking text to temp file")
+      NSLog("Error speaking text to file '#{@tempFileURL.path}'")
       return
     end
     
-    # wait for speaking to finish
+    # wait for speech to complete
     runLoop = NSRunLoop.currentRunLoop
     while @synthesizer.isSpeaking
       runLoop.runMode(NSDefaultRunLoopMode,
@@ -79,7 +79,7 @@ class SpellCheckerWindowController < NSWindowController
 
     flacURL = @tempFileURL.URLByDeletingPathExtension.URLByAppendingPathExtension('flac')
     
-    NSLog("FLAC conversion OK")
+    NSLog("FLAC conversion OK to #{flacURL.path}")
 
     # query API
     
@@ -98,12 +98,38 @@ class SpellCheckerWindowController < NSWindowController
                                                           returningResponse:responsePointer,
                                                           error:errorPointer)
     # TODO: error handling
-    responseJSON = NSString.alloc.initWithData(responseData,
-                                               encoding:NSUTF8StringEncoding)
-    NSLog("API response JSON: #{responseJSON}")
+    resultJSON = NSString.alloc.initWithData(responseData,
+                                             encoding:NSUTF8StringEncoding)
+    NSLog("API result JSON: #{resultJSON}")
     
-    response = JSON.parse(responseJSON)
-    
-    resultTextView.string = response['hypotheses'][0]['utterance']
+    result = JSON.parse(resultJSON)
+
+    hypotheses = result['hypotheses']
+    if hypotheses.length > 0
+      confidencePercent = (hypotheses[0]['confidence'] * 100).to_i
+      setResultLabelText(NSLocalizedString("Result (%d%% confidence)",
+                                           "Result (%d%% confidence)") % confidencePercent)
+      @resultTextView.setString(hypotheses[0]['utterance'])
+      setResultEnabled(true)
+    else      
+      setResultLabelText(NSLocalizedString("No result!", "No result!"))
+      @resultTextView.setString(NSLocalizedString("The recognition process failed to produce a result.",
+                                                  "The recognition process failed to produce a result."))
+      setResultEnabled(false)
+    end
+  end
+  
+  private
+  
+  def setResultLabelText(text)
+    @resultLabel.setStringValue(text)
+    @resultLabel.sizeToFit
+  end
+  
+  def setResultEnabled(enabled)
+    @resultReadButton.setEnabled(enabled)
+    @resultTextView.setSelectable(enabled)
+    @resultTextView.setTextColor(if enabled then NSColor.controlTextColor
+                                 else NSColor.disabledControlTextColor end)
   end
 end

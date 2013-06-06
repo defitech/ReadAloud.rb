@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D74FFB57175F652E003233C4 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = D74FFB56175F652E003233C4 /* AppIcon.icns */; };
-		D74FFB59175F6B37003233C4 /* SpellCheckerWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74FFB58175F6B37003233C4 /* SpellCheckerWindow.xib */; };
 		D74FFB5D175F7226003233C4 /* SpellCheckerProcess.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D74FFB5C175F7226003233C4 /* SpellCheckerProcess.pdf */; };
 		D74FFB5F175F7A2C003233C4 /* SpellCheckerWindowController.rb in Resources */ = {isa = PBXBuildFile; fileRef = D74FFB5E175F7A2C003233C4 /* SpellCheckerWindowController.rb */; };
 		D74FFB61175F8127003233C4 /* SpellCheckerProcessAlternate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D74FFB60175F8127003233C4 /* SpellCheckerProcessAlternate.pdf */; };
@@ -36,6 +35,7 @@
 		D7DFC6D9175F32400081B1C4 /* PreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6DB175F32400081B1C4 /* PreferencesView.xib */; };
 		D7DFC6E1175F34DC0081B1C4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D7DFC6E3175F34DC0081B1C4 /* Localizable.strings */; };
 		D7F4411F176094F800B70026 /* ReadAloudApplication.rb in Resources */ = {isa = PBXBuildFile; fileRef = D7F4411E176094F800B70026 /* ReadAloudApplication.rb */; };
+		D7F441201760DCBF00B70026 /* SpellCheckerWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7F441221760DCBF00B70026 /* SpellCheckerWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,6 @@
 
 /* Begin PBXFileReference section */
 		D74FFB56175F652E003233C4 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = AppIcon.icns; path = ../AppIcon.icns; sourceTree = "<group>"; };
-		D74FFB58175F6B37003233C4 /* SpellCheckerWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpellCheckerWindow.xib; sourceTree = "<group>"; };
 		D74FFB5C175F7226003233C4 /* SpellCheckerProcess.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = SpellCheckerProcess.pdf; sourceTree = "<group>"; };
 		D74FFB5E175F7A2C003233C4 /* SpellCheckerWindowController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = SpellCheckerWindowController.rb; sourceTree = "<group>"; };
 		D74FFB60175F8127003233C4 /* SpellCheckerProcessAlternate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = SpellCheckerProcessAlternate.pdf; sourceTree = "<group>"; };
@@ -91,6 +90,8 @@
 		D7DFC6E2175F34DC0081B1C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D7DFC6E4175F34E30081B1C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D7F4411E176094F800B70026 /* ReadAloudApplication.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ReadAloudApplication.rb; sourceTree = "<group>"; };
+		D7F441211760DCBF00B70026 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/SpellCheckerWindow.xib; sourceTree = "<group>"; };
+		D7F441231760DCCA00B70026 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file; name = fr; path = fr.lproj/SpellCheckerWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,7 +146,7 @@
 				D7DFC6A91757795F0081B1C4 /* ReadingController.rb */,
 				D7DFC6D4175E131D0081B1C4 /* ReadingControllerHelper.h */,
 				D7DFC6D5175E13A80081B1C4 /* ReadingControllerHelper.m */,
-				D74FFB58175F6B37003233C4 /* SpellCheckerWindow.xib */,
+				D7F441221760DCBF00B70026 /* SpellCheckerWindow.xib */,
 				D74FFB5E175F7A2C003233C4 /* SpellCheckerWindowController.rb */,
 				D7DFC694175749990081B1C4 /* Resources */,
 				D7DFC698175749990081B1C4 /* Other Sources */,
@@ -307,7 +308,7 @@
 				D7DFC6D8175F20A80081B1C4 /* Utils.rb in Resources */,
 				D7DFC6E1175F34DC0081B1C4 /* Localizable.strings in Resources */,
 				D74FFB57175F652E003233C4 /* AppIcon.icns in Resources */,
-				D74FFB59175F6B37003233C4 /* SpellCheckerWindow.xib in Resources */,
+				D7F441201760DCBF00B70026 /* SpellCheckerWindow.xib in Resources */,
 				D74FFB5D175F7226003233C4 /* SpellCheckerProcess.pdf in Resources */,
 				D74FFB5F175F7A2C003233C4 /* SpellCheckerWindowController.rb in Resources */,
 				D74FFB61175F8127003233C4 /* SpellCheckerProcessAlternate.pdf in Resources */,
@@ -377,6 +378,15 @@
 				D7DFC6E4175F34E30081B1C4 /* fr */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		D7F441221760DCBF00B70026 /* SpellCheckerWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7F441211760DCBF00B70026 /* en */,
+				D7F441231760DCCA00B70026 /* fr */,
+			);
+			name = SpellCheckerWindow.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

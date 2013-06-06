@@ -9,6 +9,11 @@
 "Reading is enabled" = "La lecture est activée";
 "Reading is disabled" = "La lecture est désactivée";
 
+"Result" = "Résultat";
+"Result (%d%% confidence)" = "Resultat (%d%% de confiance)";
+"No result!" = "Pas de résultat!";
+"The recognition process failed to produce a result." = "Le processus de reconnaissance n'est parvenu à aucun resultat.";
+
 // MASShortcut strings
 
 /* Cancel action button in recording state */

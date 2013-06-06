@@ -8,6 +8,11 @@
 "Reading is enabled" = "Reading is enabled";
 "Reading is disabled" = "Reading is disabled";
 
+"Result" = "Result";
+"Result (%d%% confidence)" = "Result (%d%% confidence)";
+"No result!" = "No result!";
+"The recognition process failed to produce a result." = "The recognition process failed to produce a result.";
+
 // MASShortcut strings
 
 /* Cancel action button in recording state */

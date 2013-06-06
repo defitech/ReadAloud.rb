@@ -84,7 +84,7 @@
 					</object>
 					<object class="NSMenuItem" id="266889172">
 						<reference key="NSMenu" ref="1061646449"/>
-						<string key="NSTitle">Spell checker (experimental)</string>
+						<string key="NSTitle">Experimental spell checker</string>
 						<string key="NSKeyEquiv">c</string>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
