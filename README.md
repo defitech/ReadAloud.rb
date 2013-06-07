@@ -8,7 +8,7 @@ A tiny OSX tool that reads aloud text copied to the clipboard, to workaround inc
 - Status bar app (no dock icon)
 - Reads aloud text when copied to the clipboard, using system-wide speech settings (accessible from the tool's preferences popup)
 - Global shortcut for enabling/disabling the reading, configurable from the preferences popup
-- Highly experimental spell checker—uses the Google Speech (unofficial) API to attempt to recognize the spoken original text
+- Highly experimental spell checker: uses the Google Speech (unofficial) API to attempt to recognize the spoken original text—for now, it requires the [FLAC command-line utility](http://flac.sourceforge.net/download.html) to be installed beforehand.
 - Language support: English and French
 
 

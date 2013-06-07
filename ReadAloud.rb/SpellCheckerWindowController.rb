@@ -72,10 +72,24 @@ class SpellCheckerWindowController < NSWindowController
     # convert to FLAC
     
     task = NSTask.alloc.init
-    task.setLaunchPath("/usr/local/bin/flac") # TODO: include flac processing in app
-    task.setArguments([ "-f", @tempFileURL.path ])
-    task.launch
-    task.waitUntilExit # TODO: error handling
+    begin
+      task.setLaunchPath("/usr/local/bin/flac") # TODO: include flac processing in app
+      task.setArguments([ "-f", @tempFileURL.path ])
+      task.launch
+      task.waitUntilExit
+    rescue Exception => e
+      NSLog("Error converting to FLAC: #{e.message}")
+      displayError(NSLocalizedString("Error converting the audio!\nPlease check that the FLAC command-line utility is  installed.",
+                                     "Error converting the audio!\nPlease check that the FLAC command-line utility is  installed."))
+      return
+    else
+      if task.terminationStatus != 0
+        
+        displayError(NSLocalizedString("Error converting the audio!\nPlease report it to us if you can.",
+                                       "Error converting the audio!\nPlease report it to us if you can."))
+        return
+      end
+    end
 
     flacURL = @tempFileURL.URLByDeletingPathExtension.URLByAppendingPathExtension('flac')
     
@@ -119,6 +133,10 @@ class SpellCheckerWindowController < NSWindowController
     end
   end
   
+  def alertDidEnd(alert, returnCode:returncode, contextInfo:contextInfo)
+    # nothing to do for now
+  end
+  
   private
   
   def setResultLabelText(text)
@@ -131,5 +149,18 @@ class SpellCheckerWindowController < NSWindowController
     @resultTextView.setSelectable(enabled)
     @resultTextView.setTextColor(if enabled then NSColor.controlTextColor
                                  else NSColor.disabledControlTextColor end)
+  end
+  
+  def displayError(message)
+    alertText = 
+    alert = NSAlert.alertWithMessageText(message,
+                                         defaultButton:nil,
+                                         alternateButton:nil,
+                                         otherButton:nil,
+                                         informativeTextWithFormat:'')
+    alert.beginSheetModalForWindow(self.window,
+                                   modalDelegate:self,
+                                   didEndSelector:'alertDidEnd:returnCode:contextInfo:',
+                                   contextInfo:nil)
   end
 end
