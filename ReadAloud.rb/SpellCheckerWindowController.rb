@@ -50,7 +50,19 @@ class SpellCheckerWindowController < NSWindowController
   
   def process(sender)
     # TODO: do processing in a separate thread and add a "spinner" to the window until done
-    
+    speakToFile
+    flacURL = convertFileToFLAC
+    result = queryRecognitionAPI(flacURL)
+    handleRecognitionResult(result)
+  end
+  
+  def alertDidEnd(alert, returnCode:returncode, contextInfo:contextInfo)
+    # nothing to do for now
+  end
+  
+  private
+  
+  def speakToFile
     @synthesizer.setVoice(nil)
     
     originalText = @originalTextView.string
@@ -68,35 +80,35 @@ class SpellCheckerWindowController < NSWindowController
       runLoop.runMode(NSDefaultRunLoopMode,
                       beforeDate:NSDate.distantFuture)
     end
-
-    # convert to FLAC
-    
+  end
+  
+  def convertFileToFLAC
     task = NSTask.alloc.init
     begin
       task.setLaunchPath("/usr/local/bin/flac") # TODO: include flac processing in app
       task.setArguments([ "-f", @tempFileURL.path ])
       task.launch
       task.waitUntilExit
-    rescue Exception => e
+      rescue Exception => e
       NSLog("Error converting to FLAC: #{e.message}")
-      displayError(NSLocalizedString("Error converting the audio!\nPlease check that the FLAC command-line utility is  installed.",
-                                     "Error converting the audio!\nPlease check that the FLAC command-line utility is  installed."))
+      displayMessage(NSLocalizedString("Error converting the audio!\nPlease check that the FLAC command-line utility is  installed.",
+                                       "Error converting the audio!\nPlease check that the FLAC command-line utility is  installed."))
       return
-    else
+      else
       if task.terminationStatus != 0
-        
-        displayError(NSLocalizedString("Error converting the audio!\nPlease report it to us if you can.",
-                                       "Error converting the audio!\nPlease report it to us if you can."))
+        displayMessage(NSLocalizedString("Error converting the audio!\nPlease report it to us if you can.",
+                                         "Error converting the audio!\nPlease report it to us if you can."))
         return
       end
     end
-
+    
     flacURL = @tempFileURL.URLByDeletingPathExtension.URLByAppendingPathExtension('flac')
+    NSLog("FLAC conversion OK to '#{flacURL.path}'")
     
-    NSLog("FLAC conversion OK to #{flacURL.path}")
-
-    # query API
-    
+    return flacURL
+  end
+  
+  def queryRecognitionAPI(flacURL)
     request = NSMutableURLRequest.alloc.initWithURL(@apiURL)
     request.setHTTPMethod('POST')
     request.addValue("audio/x-flac; rate=22050",
@@ -114,10 +126,12 @@ class SpellCheckerWindowController < NSWindowController
     # TODO: error handling
     resultJSON = NSString.alloc.initWithData(responseData,
                                              encoding:NSUTF8StringEncoding)
-    NSLog("API result JSON: #{resultJSON}")
+    NSLog("Recognition API result JSON: #{resultJSON}")
     
-    result = JSON.parse(resultJSON)
-
+    return JSON.parse(resultJSON)
+  end
+  
+  def handleRecognitionResult(result)
     hypotheses = result['hypotheses']
     if hypotheses.length > 0
       confidencePercent = (hypotheses[0]['confidence'] * 100).to_i
@@ -125,19 +139,14 @@ class SpellCheckerWindowController < NSWindowController
                                            "Result (%d%% confidence)") % confidencePercent)
       @resultTextView.setString(hypotheses[0]['utterance'])
       setResultEnabled(true)
-    else      
+      else
       setResultLabelText(NSLocalizedString("No result!", "No result!"))
-      @resultTextView.setString(NSLocalizedString("The recognition process failed to produce a result.",
-                                                  "The recognition process failed to produce a result."))
+      @resultTextView.setString('')
       setResultEnabled(false)
+      displayMessage(NSLocalizedString("The recognition process failed to produce a result.",
+                                       "The recognition process failed to produce a result."))
     end
   end
-  
-  def alertDidEnd(alert, returnCode:returncode, contextInfo:contextInfo)
-    # nothing to do for now
-  end
-  
-  private
   
   def setResultLabelText(text)
     @resultLabel.setStringValue(text)
@@ -151,7 +160,7 @@ class SpellCheckerWindowController < NSWindowController
                                  else NSColor.disabledControlTextColor end)
   end
   
-  def displayError(message)
+  def displayMessage(message)
     alertText = 
     alert = NSAlert.alertWithMessageText(message,
                                          defaultButton:nil,

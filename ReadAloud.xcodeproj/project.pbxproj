@@ -90,8 +90,8 @@
 		D7DFC6E2175F34DC0081B1C4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D7DFC6E4175F34E30081B1C4 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D7F4411E176094F800B70026 /* ReadAloudApplication.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = ReadAloudApplication.rb; sourceTree = "<group>"; };
-		D7F441211760DCBF00B70026 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/SpellCheckerWindow.xib; sourceTree = "<group>"; };
-		D7F441231760DCCA00B70026 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file; name = fr; path = fr.lproj/SpellCheckerWindow.xib; sourceTree = "<group>"; };
+		D7F441211760DCBF00B70026 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SpellCheckerWindow.xib; sourceTree = "<group>"; };
+		D7F441231760DCCA00B70026 /* fr */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = fr; path = fr.lproj/SpellCheckerWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
