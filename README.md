@@ -14,12 +14,15 @@ A tiny OSX tool that reads aloud text copied to the clipboard, to workaround inc
 
 ## Requirements
 
-For now the experimental spell checker requires the [FLAC command-line utility](http://flac.sourceforge.net/download.html) to be installed beforehand.
+For now the experimental spell checker requires the FLAC command-line utility to be installed beforehand. You can either:
+
+- Use one of the OSX downloads on the [official FLAC page](http://flac.sourceforge.net/download.html) (the 'FLAC tools for OS X' will do fine)
+- `brew install flac`, for those with [Homebrew](http://mxcl.github.io/homebrew/)
 
 
 ## Download binaries
 
-- [Version 1.0](https://dl.dropboxusercontent.com/u/14379042/Apps%20publi%C3%A9es/ReadAloud-1.0.dmg)
+- [Version 1.0.1](https://dl.dropboxusercontent.com/u/14379042/Apps%20publi%C3%A9es/ReadAloud-1.0.1.dmg)
 
 
 ## Disclaimer
