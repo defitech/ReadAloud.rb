@@ -16,6 +16,9 @@ class SpellCheckerWindowController < NSWindowController
   
   def loadWindow
     super
+    
+    @originalTextView.setDelegate(self)
+    applyFontFromPreferences(@originalTextView)
 
     @synthesizer = NSSpeechSynthesizer.alloc.init()
     
@@ -56,8 +59,15 @@ class SpellCheckerWindowController < NSWindowController
     handleRecognitionResult(result)
   end
   
+  # NSAlert delegate method
   def alertDidEnd(alert, returnCode:returncode, contextInfo:contextInfo)
     # nothing to do for now
+  end
+  
+  # NSTextView delegate method
+  def textViewDidChangeTypingAttributes(notification)
+    @resultTextView.setFont(@originalTextView.font)
+    saveFontPreferences(@originalTextView.font)
   end
   
   private
@@ -172,4 +182,20 @@ class SpellCheckerWindowController < NSWindowController
                                    didEndSelector:'alertDidEnd:returnCode:contextInfo:',
                                    contextInfo:nil)
   end
+  
+  def applyFontFromPreferences(targetTextView)
+    prefs = NSUserDefaults.standardUserDefaults
+    font = NSFont.fontWithName(prefs.stringForKey('SpellChecker.Text.Font.Name'),
+                               size:prefs.doubleForKey('SpellChecker.Text.Font.Size'))
+    targetTextView.setFont(font)
+  end
+  
+  def saveFontPreferences(font)
+    prefs = NSUserDefaults.standardUserDefaults
+    prefs.setObject(font.fontName,
+                    forKey:'SpellChecker.Text.Font.Name')
+    prefs.setDouble(font.pointSize,
+                    forKey:'SpellChecker.Text.Font.Size')
+  end
+    
 end
